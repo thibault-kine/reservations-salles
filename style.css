@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(fonts/Outfit-VariableFont_wght.ttf);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    background-color: crimson;
+    font-family: "Roboto Slab";
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header a
+{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+footer
+{
+    background-color: crimson;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+footer img
+{
+    filter: invert(1);
+    width: 50px;
+}
+
+* h1, * h2, * h3
+{
+    font-family: "Roboto Slab";
+}
+
+form
+{
+    padding: 25px;
+    width: fit-content;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+form input
+{
+    padding: 5px;
+}
+
+form #redirect
+{
+    text-decoration: none;
+    color: darkkhaki;
+    float: right;
+}
+
+form #redirect:hover
+{
+    color: wheat;
+    font-style: italic;
+}
+
+.login-form
+{
+    background-color: crimson;
+    color: white;
+    font-family: Outfit;
+    font-size: 20;
+}
+
+.field input
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.btn
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
