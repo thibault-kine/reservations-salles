@@ -8,7 +8,6 @@
     <a href="index.php"><h1>LeRéserveur.com</h1></a>
     <div id="header-links">
         <?php
-        session_start();
         if(empty($_SESSION))
         {
             echo "
@@ -16,7 +15,7 @@
             <a href='connexion.php'>Connexion</a>
             ";
         }
-        else
+        elseif(!empty($_SESSION))
         {
             echo "
             <a href='profil.php'>Profil</a>
