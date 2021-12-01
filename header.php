@@ -1,3 +1,20 @@
+<?php
+function ErrMsg($_str)
+{
+    echo "<p style='color: red; font-size: 20; text-align: center;'>".$_str."</p>";
+}
+
+function Display404()
+{
+    echo "
+    <div class='err404' style='display: flex; flex-direction: column; justify-content: center; width: fit-content; margin: auto;'>
+        <img src='img/404.png' style='width: 100%; image-rendering: pixelated;'>
+        <h1 style='color: grey; padding-top: 20px;'>Désolé, cette page n'existe pas</h1>
+    </div>
+    ";
+}
+?>
+
 <html>
     <head>
         <title>LeRéserveur.com</title>
@@ -22,6 +39,7 @@
         }
         else
         {
+            echo "<a href='evenements.php'>Evènements</a>";
             echo "<a href='planning.php'>Planning</a>";
             echo "<a href='profil.php'>Profil</a>";
         }

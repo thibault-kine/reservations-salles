@@ -38,7 +38,7 @@ include("header.php");
 
 <?php
 
-if(!empty($_POST))
+if(!empty($_POST)) // si le formulaire n'est pas vide
 {
     $titre = $_POST["title"];
     $desc = $_POST["desc"];
@@ -49,15 +49,20 @@ if(!empty($_POST))
     $database = mysqli_connect("localhost", "root", "", "reservationsalles");
     
     // vérification : il ne faut pas que plusieurs réservations soient le mm jour et la mm heure
-    $selectQuery = "SELECT * FROM reservations WHERE debut='$start' AND fin='$end'";
+    $selectQuery = "SELECT * FROM reservations WHERE debut AND fin
+    BETWEEN '".$start."' AND '".$end."'";
     $result = mysqli_query($database, $selectQuery);
-    $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    
-    if(empty($row)) // si row n'a trouvé aucune entrée, alors les horaires sont libres
+    $fetch = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    if(empty($fetch)) // si fetch n'est pas vide, une entrée correspond, on cherche l'inverse
     {
         $insertQuery = "INSERT INTO reservations(titre, description, debut, fin, id_utilisateur)
-        VALUES ('$titre', '$desc', '$start', '$end', '$userID')";
+        VALUES ('".$titre."', '".$desc."', '".$start."', '".$end."', '".$userID."');";
         $result = mysqli_query($database, $insertQuery);
+    }
+    else
+    {
+        ErrMsg("La salle a déjà été réservée pour cette date et heure.");
     }
 }
 

@@ -168,3 +168,11 @@ h2 ul
     border-radius: 30px;
     font-weight: bold;
 }
+
+
+.err404 img
+{
+    image-rendering: pixelated;
+    width: 30%;
+    height: auto;
+}
