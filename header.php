@@ -1,28 +1,31 @@
 <html>
-<head>
-    <title>LeRéserveur.com</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <title>LeRéserveur.com</title>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+        <link href="fonts.css" rel="stylesheet">
+        <link href="calendrier.css" rel="stylesheet">
+    </head>
+
+<body>
+
 <header>
-    <a href="index.php"><h1>LeRéserveur.com</h1></a>
-    <div id="header-links">
+    <a href="index.php">
+        <h1>LeRéserveur.com</h1>
+    </a>
+    <div id="links">
         <?php
-        session_start();
         if(empty($_SESSION))
         {
-            echo "
-            <a href='inscription.php'>Inscription</a>
-            <a href='connexion.php'>Connexion</a>
-            ";
+            echo "<a href='inscription.php'>Inscription</a>";
+            echo "<a href='connexion.php'>Connexion</a>";
         }
         else
         {
-            echo "
-            <a href='profil.php'>Profil</a>
-            <a href='planning.php'>Planning des salles</a>
-            ";
+            echo "<a href='planning.php'>Planning</a>";
+            echo "<a href='profil.php'>Profil</a>";
         }
         ?>
-    </div> 
+    </div>
 </header>
+<main>

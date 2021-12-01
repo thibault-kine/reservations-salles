@@ -1,0 +1,31 @@
+@import url(style.css);
+
+#calendrier
+{
+    margin: auto;
+    user-select: none;
+}
+
+#calendrier *
+{
+    background-color: rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+#calendrier th
+{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px 0 0 10px;
+    width: 100px;
+}
+
+#calendrier td
+{
+    width: fit-content;
+    transition: width 0.5s;
+}
+
+#calendrier td:hover
+{
+    background-color: rgba(0,0,0,0.01);
+}
