@@ -8,20 +8,61 @@ if(empty($_SESSION))
 
 include("header.php");
 
-// TODO: pourquoi quand tu rajoutes un "/" a la fin de l'url ça marche plus ? et pourquoi quand tu mets un "?id=X" le css ne s'applique plus ???
 if(empty($_GET["id"]))
 {
     Display404();
 }
+elseif($_GET["id"] != $_SESSION["id"])
+{
+    header("location: evenements.php?id=".$_SESSION["id"]);
+}
 else
 {
-    $eventID = $_GET["id"];
+    echo "<h1 style='text-align: center;'>Vos évènements :</h1>";
+
+    $userID = $_GET["id"];
     $database = mysqli_connect("localhost", "root", "", "reservationsalles");
-    $selectQuery = "SELECT * FROM reservations WHERE id='".$eventID."'";
+    $selectQuery = "SELECT * FROM reservations WHERE id_utilisateur='$userID'";
     $result = mysqli_query($database, $selectQuery);
     $fetch = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    var_dump($fetch);
+    echo "
+    <style>
+        .event
+        {
+            background-color: crimson;
+            border: 10px solid rgba(255,255,255,0.4);
+            width: 30%;
+            margin: auto;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .subtext
+        {
+            color: rgba(255,255,255,0.5);
+            font-size: 14;
+            margin-top: 10px;
+        }
+    </style>
+    ";
+
+    foreach($fetch as $f)
+    {
+        echo "
+        <div class='event'>
+            <p class='subtext'>Titre :</p>
+            <h1>".$f["titre"]."</h1>
+            <p class='subtext'>Description :</p>
+            <h3>".$f["description"]."</h3>
+            <p class='subtext'>Début :</p>
+            <p>".$f["debut"]."</p>
+            <p class='subtext'>Fin :</p>
+            <p>".$f["fin"]."</p>
+        </div>
+        ";
+    }
 }
 
 include("footer.php");

@@ -30,7 +30,7 @@ echo "</table>";
 <div id="reservation-links">
     <a href="reservation-form.php">Réservez notre salle</a>
     <h2>ou</h2>
-    <a href="reservation.php">Regardez quelles horaires sont déjà réservées</a>
+    <a href="evenements.php?id=<?php echo $_SESSION["id"]?>">Regardez quelles horaires sont déjà réservées</a>
 </div>
 
 <?php

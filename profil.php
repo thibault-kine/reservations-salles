@@ -27,12 +27,11 @@ include("header.php");
             <input type="text" name="login" value="'.$_SESSION["login"].'" id="login"><br>
             <input type="password" name="p1" value="'.$_SESSION["password"].'" class="passwords"><br>
             <input type="password" name="p2" placeholder="confirmer mot de passe" class="passwords"><br>
-            <input type="submit" value="Valider les changements">
-            
+            <input type="submit" value="Valider les changements" class="btn">
         </form>
         ');
         ?>
-        <a href="logout.php" style="color: red;">Déconnexion</a>
+        <a href="logout.php" style="color: rgba(255,255,255,0.5);">Déconnexion</a>
     </div>
 </div>    
 

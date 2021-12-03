@@ -57,8 +57,21 @@ if(!empty($_POST)) // si le formulaire n'est pas vide
     if(empty($fetch)) // si fetch n'est pas vide, une entrée correspond, on cherche l'inverse
     {
         $insertQuery = "INSERT INTO reservations(titre, description, debut, fin, id_utilisateur)
-        VALUES ('".$titre."', '".$desc."', '".$start."', '".$end."', '".$userID."');";
+        VALUES ('$titre', '$desc', '$start', '$end', '$userID');";
         $result = mysqli_query($database, $insertQuery);
+
+        $selectQuery = "SELECT * FROM reservations WHERE id_utilisateur='$userID'";
+        $result = mysqli_query($database, $selectQuery);
+        $fetch = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        if(isset($fetch["id"]))
+        {
+            header("location: evenements.php?id=".$userID);
+        }
+        else
+        {
+            header("location: index.php");
+        }
     }
     else
     {

@@ -167,12 +167,37 @@ h2 ul
     border: none;
     border-radius: 30px;
     font-weight: bold;
+    width: 50%;
 }
-
 
 .err404 img
 {
     image-rendering: pixelated;
     width: 30%;
     height: auto;
+}
+
+.event
+{
+    border: 1px solid red;
+}
+
+#profil
+{
+    background-color: crimson;
+    border: 10px solid rgba(255,255,255,0.4);
+    padding: 20px;
+    width: 40%;
+    margin: auto;
+}
+
+#profil *
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#profil input
+{
+    height: 30px;
 }
