@@ -65,7 +65,7 @@ if($canRegister)
     $_SESSION["login"] = $_login;
     $_SESSION["password"] = $_password;
 
-    $bdd = mysqli_connect("localhost", "root", "", "livreor");
+    $bdd = mysqli_connect("localhost", "root", "", "reservationsalles");
 
     $query = "INSERT INTO `utilisateurs`(`login`, `password`) VALUES ('$_login', '$_password');";
 

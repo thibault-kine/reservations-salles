@@ -56,7 +56,8 @@ function checkLogin(string $_login, string $_password)
 {
     if($_login != "" && $_password != "") // si les champs entrés ne sont pas vides
     {
-        $db = mysqli_connect("localhost", "root", "", "livreor");
+
+        $db = mysqli_connect("localhost", "root", "", "reservationsalles");
 
         $query = "SELECT `login`, `password` FROM `utilisateurs` WHERE '$_login'=`login` AND '$_password'=`password`";
         $result = mysqli_query($db, $query);

@@ -1,12 +1,4 @@
-@font-face {
-    font-family: "Roboto Slab";
-    src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: Outfit;
-    src: url(fonts/Outfit-VariableFont_wght.ttf);
-}
+@import url(fonts.css);
 
 *
 {
@@ -14,25 +6,38 @@
     padding: 0;
 }
 
-header
+header, footer
 {
     background-color: crimson;
-    font-family: "Roboto Slab";
-    color: white;
+    font-family: Roboto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    user-select: none;
+}
+
+header
+{
+    margin-bottom: 30px;
+}
+
+footer
+{
+    margin-top: 30px;
 }
 
 header a
 {
     text-decoration: none;
     color: white;
-    padding: 15px;
+    padding-right: 20px;
 }
 
 footer
 {
+    flex-direction: row;
     background-color: crimson;
     padding: 15px;
     width: 100%;
@@ -46,15 +51,17 @@ footer img
 {
     filter: invert(1);
     width: 50px;
+    height: auto;
 }
 
-* h1, * h2, * h3
+body
 {
-    font-family: "Roboto Slab";
+    font-family: Outfit;
 }
 
-form
+a
 {
+    color: rgba(255,255,255,0.4);
     padding: 25px;
     width: fit-content;
     border: 10px solid rgba(255, 255, 255, 0.3);
@@ -64,41 +71,146 @@ form
     margin-bottom: 50px;
 }
 
-form input
+a:hover
 {
-    padding: 5px;
+    color: white;
 }
 
-form #redirect
+h2 ul
 {
-    text-decoration: none;
-    color: darkkhaki;
-    float: right;
+    font-size: 20;
+    list-style-type: none;
+    margin-left: 30px;
 }
 
-form #redirect:hover
+#list
 {
-    color: wheat;
-    font-style: italic;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.1);
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
-.login-form
+#welcome
+{
+    border: 10px solid rgba(255,255,255,0.4);
+    background-color: crimson;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    padding-top: 5%;
+    text-align: center;
+}
+
+#title
 {
     background-color: crimson;
+    border: 10px solid rgba(255,255,255,0.4);
     color: white;
-    font-family: Outfit;
-    font-size: 20;
+    padding: 10px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#reservation-links
+{
+    font-size: 24;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#reservation-links a
+{
+    font-size: 26;
+    color: blue;
+}
+
+#form
+{
+    background-color: crimson;
+    border: 5px solid rgba(255,255,255,0.4);
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+    font-size: 22;
+    line-height: 40px;
 }
 
 .field input
 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: auto;
+    height: 30px;
+    width: 65%;
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    padding-left: 10px;
+    font-size: 18;
+    font-family: Outfit;
+}
+
+.field
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.time
+{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn
 {
+    padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    font-family: Roboto;
+    font-size: 18;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 50%;
+}
+
+.err404 img
+{
+    image-rendering: pixelated;
+    width: 30%;
+    height: auto;
+}
+
+.event
+{
+    border: 1px solid red;
+}
+
+#profil
+{
+    background-color: crimson;
+    border: 10px solid rgba(255,255,255,0.4);
+    padding: 20px;
+    width: 40%;
+    margin: auto;
+}
+
+#profil *
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#profil input
+{
+    height: 30px;
 }

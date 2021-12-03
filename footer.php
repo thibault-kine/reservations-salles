@@ -1,5 +1,6 @@
+</main>
 <footer>
-    <a href="https://github.com/thibault-kine/reservations-salles">
-        <img src="img/githublogo.png" alt="">
-    </a>
+    <a href="https://github.com/thibault-kine/reservations-salles"><img src="img/githublogo.png" alt=""></a>
 </footer>
+</body>
+</html>
