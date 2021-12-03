@@ -17,7 +17,7 @@ include("header.php");
         echo "<form action=\"\" method=\"post\">";
         if(!empty($_POST))
         {
-            echo "<p style='color: red;'>Login ou mot de passe incorrects</p>";
+            echo "<p>Login ou mot de passe incorrects</p>";
         }
     }
     elseif($_SESSION["id"] == 1 && $_SESSION["login"] == "admin")
