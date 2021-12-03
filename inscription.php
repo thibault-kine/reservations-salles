@@ -6,7 +6,7 @@ $canRegister = false;
 include("header.php");
 ?>
     <div id="welcome">
-        <h1>~ Inscrivez-vous afin d'écrire sur Golden Book ~</h1>
+        <h1>~ Inscrivez-vous afin de réserver une salle ~</h1>
     </div>
     <div id="inscription">
 
@@ -14,11 +14,11 @@ include("header.php");
     <?php
     if(!$canRegister)
     {
-        echo("<form action=\"\" method=\"post\">");
+        echo("<form action=\"\" method=\"post\" class='form'>");
     }
     else
     {
-        echo("<form action=\"connexion.php\" method=\"post\">");
+        echo("<form action=\"connexion.php\" method=\"post\" class='form'>");
     }
     ?>
         <div class="field">

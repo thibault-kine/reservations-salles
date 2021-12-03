@@ -38,7 +38,13 @@ header a
 footer
 {
     flex-direction: row;
-    justify-content: center
+    background-color: crimson;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: static;
 }
 
 footer img
@@ -56,6 +62,12 @@ body
 a
 {
     color: rgba(255,255,255,0.4);
+    padding: 25px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 a:hover
@@ -119,7 +131,7 @@ h2 ul
     color: blue;
 }
 
-#form
+.form
 {
     background-color: crimson;
     border: 5px solid rgba(255,255,255,0.4);

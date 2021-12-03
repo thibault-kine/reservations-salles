@@ -6,7 +6,7 @@ include("header.php");
 ?>
 
     <div id="welcome">
-        <h1>Connectez-vous à Bouff' @ Home !</h1>
+        <h1>Connectez-vous pour réserver une salle</h1>
     </div>
     <div id="connexion">
 

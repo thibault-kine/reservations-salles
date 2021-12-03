@@ -37,7 +37,7 @@ function Display404()
             echo "<a href='inscription.php'>Inscription</a>";
             echo "<a href='connexion.php'>Connexion</a>";
         }
-        else
+        elseif(!empty($_SESSION))
         {
             echo "<a href='evenements.php?id=".$_SESSION["id"]."'>Evènements</a>";
             echo "<a href='planning.php'>Planning</a>";
